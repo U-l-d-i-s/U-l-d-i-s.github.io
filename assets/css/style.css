@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body-scrollbarmargin{
+    margin-right: 17px;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 60px;
+    font-family: 'Gotham';
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+p{
+    font-size: 15px;
+    font-family: 'Gotham';
+    font-weight: 400;
+    text-align: justify;
+    margin: 20px;
+}
+section{
+    min-height: 100vh;
+}
+header{
+    position: sticky;
+    top: 0;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    background-color: white;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    z-index: 2;
+    transition: background-color 0.3s;
+
+
+}
+nav{
+    min-height: 40px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    justify-content: space-around;
+}
+.arrowDown{
+    opacity: 0;
+    border-right: 7px solid; 
+    border-bottom: 7px solid;
+    height: 30px;
+    width: 30px;
+    transform: rotate(45deg);
+    margin-left: 90%;
+    display: inline-block;
+    position: fixed;
+    margin-top: 7%;
+    z-index: 1;
+    cursor: pointer;
+
+}
+.arrowDown:hover{
+    color: rgb(226, 87, 87);
+    transition: 0.3s;
+}
+footer{
+    height: 40px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+footer a, footer p{
+    text-decoration: none;
+    text-align: center;
+    
+}
+a.anchor{
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+    transition: 2s;
+}
+footer #overfooter {
+    bottom: 100vh;
+}
+a.link, a.openInNewTab, .map .link a{
+    visibility: visible;
+    background: rgb(243, 137, 137) ;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ;
+    opacity: 0.6;
+    transition: 0.3s;
+    justify-content: space-between;
+}
+
+.link:hover, .openInNewTab:hover, .map .link :hover , .map .link .openInNewTab :hover{
+    opacity: 1;
+}
+.link, .openInNewTab, .map .link , .map .openInNewTab{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    min-width: 40%;
+    margin: auto;
+    text-align: center;
+    
+    
+}
+div .link, div .map .link, .map .link a {
+    display: block;
+
+}
+.map div .link{
+    margin: 10px;
+    margin-left:auto ;
+    margin-right: auto;
+
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(228, 75, 75);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.stop-scroll{
+    height: 100%;
+    overflow: hidden;
+    
+}
+.map .link{
+    margin-top: 10vh;
+    }
+map{
+    margin: auto;
+    width: 50%;
+    display: block;
+}
+.map .mapouter{
+    margin: auto;
+    position: relative;
+    top: 0; left: 0; bottom: 0; right: 0;
+    
+}
+
+.mapouter{
+    
+    text-align:center;
+    margin: auto;
+    height:600px;
+    width:600px;
+}
+.gmap_canvas {
+    text-align: center;
+    overflow:hidden;
+    background:none!important;
+    height:600px;
+    width:600px;
+    border-bottom: 3px solid ;
+
+}
+iframe{
+    width:100%;
+    height:100%;
+}
+.contact{
+    text-align: center;
+    margin: 30px;
+    font-size: 20px;
+    font-family: 'Gotham';
+    font-weight: 400;
+}
+.relative{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 735px){
+    body{
+        overflow-x: hidden;
+    }
+    
+    nav a{
+        font-size: 1.2rem;
+        transition: font-size 2s;
+    }
+}
+
+
+
+@media only screen and ( max-width : 735px){
+    body{
+        overflow-x: hidden;
+        margin-top: 80px;
+    }
+    header{
+        background-color: rgb(30, 30, 30);
+        top: 0;
+        width: 100%;
+        transition: background-color 0.3s;
+        transition: top 0.3s;
+        position: fixed;
+    }
+    nav ul{
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0vh;
+        background-color: rgb(30, 30, 30);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    nav ul li a{
+        color: white;
+        font-size: 25px;
+        visibility: visible;
+    }
+    .burger{
+        display: block;
+
+    }
+    .link{
+        display: block;
+        width: 70%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+    .link a{
+        margin-top: 15px; 
+    }
+    
+    .mapouter{
+        justify-self: center;
+        align-self: center;
+        width: 90vw;
+        height: 90vw;
+    }
+    .gmap_canvas {
+        justify-self: center;
+        align-self: center;
+        left: 0;
+        margin: auto;
+        width: 90vw;
+        height: 90vw;
+        border-bottom: 3px solid ;
+    }
+    .map .mapouter{
+        position: relative;
+        text-align: center;
+        align-items: center;
+    }
+    .map .link a{
+        display: block;
+        margin-top: 15px ;
+    }
+    .contact{
+        text-align: center;
+        margin-top: 10vh;
+
+    }
+    .map{
+        display: grid;
+    }
+    .map div.link{
+        display: block;
+        margin-top: 20px ;
+        width: 70%
+    }
+   
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFadeTo{
+    from{
+        opacity: 0;
+        transform: translateX(50);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
